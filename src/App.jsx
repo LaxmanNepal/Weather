@@ -10,7 +10,7 @@ const App = () => {
   const [hourlyForecasts, setHourlyForecasts] = useState([]);
   const [hasNoResults, setHasNoResults] = useState(false);
   const searchInputRef = useRef(null);
-  const API_KEY = import.meta.env.VITE_API_KEY;
+  const API_KEY = import.meta.env.a1e68b0ba397403fb7823118242310;
 
   const filterHourlyForecast = (hourlyData) => {
     const currentHour = new Date().setMinutes(0, 0, 0);
@@ -57,7 +57,7 @@ const App = () => {
   // Fetch default city (London) weather data on initial render
   useEffect(() => {
     const defaultCity = "London";
-    const API_URL = `https://api.weatherapi.com/v1/forecast.json?key=${a1e68b0ba397403fb7823118242310}&q=${defaultCity}&days=2`;
+    const API_URL = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${defaultCity}&days=2`;
     getWeatherDetails(API_URL);
   }, []);
 
